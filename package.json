@@ -1,12 +1,13 @@
 {
-  "name": "",
+  "name": "soen-390",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production react-router build",
     "dev": "react-router dev",
     "start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "generate-pwa-assets": "pwa-assets-generator -c ./pwa-config.assets.ts"
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.1.0",
@@ -22,6 +23,7 @@
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
+    "@vite-pwa/assets-generator": "^0.2.6",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.49",
